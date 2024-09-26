@@ -1,0 +1,118 @@
+{
+  "transactions": [
+    {
+      "hash": null,
+      "transactionType": "CALL",
+      "contractName": "Token",
+      "contractAddress": "0x515e8b1eb6919129cbccd0f03a637c1640bf5dc3",
+      "function": "approve(address,uint256)",
+      "arguments": [
+        "0x83340AA4A8b19b179eA5f17493A23D0DE70295eC",
+        "10000000000000000000000000"
+      ],
+      "transaction": {
+        "from": "0x321e2e525195b6981db170e8e20ac206a15e3095",
+        "to": "0x515e8b1eb6919129cbccd0f03a637c1640bf5dc3",
+        "gas": "0x1090c",
+        "value": "0x0",
+        "input": "0x095ea7b300000000000000000000000083340aa4a8b19b179ea5f17493a23d0de70295ec000000000000000000000000000000000000000000084595161401484a000000",
+        "nonce": "0xb",
+        "chainId": "0x14a34"
+      },
+      "additionalContracts": [],
+      "isFixedGasLimit": false
+    },
+    {
+      "hash": null,
+      "transactionType": "CALL",
+      "contractName": "Exchange",
+      "contractAddress": "0x83340aa4a8b19b179ea5f17493a23d0de70295ec",
+      "function": "addLiquidity(uint256)",
+      "arguments": [
+        "1000000000000000000000000"
+      ],
+      "transaction": {
+        "from": "0x321e2e525195b6981db170e8e20ac206a15e3095",
+        "to": "0x83340aa4a8b19b179ea5f17493a23d0de70295ec",
+        "gas": "0x24f3d",
+        "value": "0x16345785d8a0000",
+        "input": "0x51c6590a00000000000000000000000000000000000000000000d3c21bcecceda1000000",
+        "nonce": "0xc",
+        "chainId": "0x14a34"
+      },
+      "additionalContracts": [],
+      "isFixedGasLimit": false
+    },
+    {
+      "hash": null,
+      "transactionType": "CALL",
+      "contractName": "Exchange",
+      "contractAddress": "0x83340aa4a8b19b179ea5f17493a23d0de70295ec",
+      "function": "ethToTokenSwap(uint256)",
+      "arguments": [
+        "0"
+      ],
+      "transaction": {
+        "from": "0x321e2e525195b6981db170e8e20ac206a15e3095",
+        "to": "0x83340aa4a8b19b179ea5f17493a23d0de70295ec",
+        "gas": "0x16623",
+        "value": "0x2386f26fc10000",
+        "input": "0xf979dcd70000000000000000000000000000000000000000000000000000000000000000",
+        "nonce": "0xd",
+        "chainId": "0x14a34"
+      },
+      "additionalContracts": [],
+      "isFixedGasLimit": false
+    },
+    {
+      "hash": null,
+      "transactionType": "CALL",
+      "contractName": "Exchange",
+      "contractAddress": "0x83340aa4a8b19b179ea5f17493a23d0de70295ec",
+      "function": "tokenToETHSwap(uint256,uint256)",
+      "arguments": [
+        "10000000000000000000000",
+        "0"
+      ],
+      "transaction": {
+        "from": "0x321e2e525195b6981db170e8e20ac206a15e3095",
+        "to": "0x83340aa4a8b19b179ea5f17493a23d0de70295ec",
+        "gas": "0x14d23",
+        "value": "0x0",
+        "input": "0x73b2872e00000000000000000000000000000000000000000000021e19e0c9bab24000000000000000000000000000000000000000000000000000000000000000000000",
+        "nonce": "0xe",
+        "chainId": "0x14a34"
+      },
+      "additionalContracts": [],
+      "isFixedGasLimit": false
+    },
+    {
+      "hash": null,
+      "transactionType": "CALL",
+      "contractName": "Exchange",
+      "contractAddress": "0x83340aa4a8b19b179ea5f17493a23d0de70295ec",
+      "function": "removeLiquidity(uint256)",
+      "arguments": [
+        "5000000000000"
+      ],
+      "transaction": {
+        "from": "0x321e2e525195b6981db170e8e20ac206a15e3095",
+        "to": "0x83340aa4a8b19b179ea5f17493a23d0de70295ec",
+        "gas": "0x171f8",
+        "value": "0x0",
+        "input": "0x9c8f9f230000000000000000000000000000000000000000000000000000048c27395000",
+        "nonce": "0xf",
+        "chainId": "0x14a34"
+      },
+      "additionalContracts": [],
+      "isFixedGasLimit": false
+    }
+  ],
+  "receipts": [],
+  "libraries": [],
+  "pending": [],
+  "returns": {},
+  "timestamp": 1727303707,
+  "chain": 84532,
+  "commit": "f1ffe1c"
+}
