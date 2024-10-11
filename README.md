@@ -1,67 +1,66 @@
-## Foundry
+# LockStaking and Token Contracts
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+This repository contains two primary smart contracts:
 
-Foundry consists of:
+1. Token.sol: A basic ERC20 token contract that is used for staking and rewards.
+2. LockStaking.sol: A staking contract that allows users to lock their tokens for a specific duration to earn rewards.
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## Features
 
-## Documentation
+### Token.sol
 
-https://book.getfoundry.sh/
+1. ERC20 Standard: A standard ERC20 token that can be used for staking and as a reward token.
+2. Minting: The token contract mints a fixed supply of tokens to the deployer (owner) at the time of deployment.
 
-## Usage
+### LockStaking.sol
 
-### Build
+1. Staking: Users can stake tokens and start earning rewards over time.
+2. Lock Period: Staked tokens are locked for a specific duration, and users can only withdraw or claim rewards after the lock period has elapsed.
+3. Rewards Distribution: Users earn rewards based on the amount staked and the duration of their stake.
+4. Withdraw: After the lock period, users can withdraw their staked tokens.
+5. Claim Rewards: Users can claim their earned rewards after the lock period.
 
-```shell
-$ forge build
-```
+---
 
-### Test
+## Contracts Overview
 
-```shell
-$ forge test
-```
+### 1. Token.sol
 
-### Format
+The Token.sol contract is a simple ERC20 token contract that implements the standard ERC20 functionalities and mints a fixed supply of tokens to the deployer upon deployment.
 
-```shell
-$ forge fmt
-```
+- _owner: The address of the token owner (deployer).
+- _maxSupply: The maximum supply of tokens that are minted when the contract is deployed.
 
-### Gas Snapshots
+### 2. LockStaking.sol
 
-```shell
-$ forge snapshot
-```
+The LockStaking.sol contract allows users to stake tokens and earn rewards over time. However, staked tokens are locked for a specified duration, and users can only withdraw tokens or claim rewards after the lock period.
 
-### Anvil
+- s_stakingToken: The ERC20 token that users stake.
+- s_rewardToken: The ERC20 token that users receive as rewards.
+- s_lockDuration: The lock duration for staked tokens, during which withdrawals and reward claims are disabled.
 
-```shell
-$ anvil
-```
+#### Key Features
 
-### Deploy
+- Locking Period: Users must wait until the lock period ends to withdraw or claim rewards.
+- Earned Rewards: Users accumulate rewards based on the staked amount and the duration of staking.
+- Withdrawal and Claim: Tokens can only be withdrawn and rewards claimed after the lock duration has passed.
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
+---
 
-### Cast
+## How to Deploy
 
-```shell
-$ cast <subcommand>
-```
+### Deployment Steps
 
-### Help
+1. Token Deployment: Deploy the `Token` contract with the total supply, which will be minted to the deployer's address.
+2. Staking Deployment: Deploy the `LockStaking` contract, specifying the staking token, reward token, and the lock duration.
 
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
-# LiquiditySwap
+### Deploy Script
+
+A deployment script can be used to automate the process of deploying both the `Token` and `LockStaking` contracts.
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
